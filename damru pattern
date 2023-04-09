@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace damru_pattern_using_do_while
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int NOL = 1, No, Space = 1, star = 5;
+
+            do
+            {
+                No = 1;
+                do
+                {
+                    Console.Write(" ");
+                    No++;
+                } while (No <= Space);
+                No = 1;
+                do
+                {
+                    Console.Write("* ");
+                    No++;
+                } while (No <= star);
+                if (NOL < 3)
+                {
+                    star--;
+                    Space++;
+                }
+                else
+                {
+                    star++;
+                    Space--;
+                }
+                NOL++;
+                Console.WriteLine();
+            } while (NOL <= 5);
+            Console.ReadLine();
+        }
+    }
+}
